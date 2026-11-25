@@ -14,7 +14,8 @@
   // Lyrics: lyrics.lrc in this folder (your timed lines).
   // Open: right-click this file in VS Code -> Open with Live Server.
   window.SONG = {
-    title: "The Cure", artist: "Olivia Rodrigo",
+    title: "The Cure", artist: "Olivia Rodrigo", lrclib: { artist: "Olivia Rodrigo", track: "The Cure" },   // no lyrics.lrc? the timed lyrics load from lrclib.net
+    start: 200.5,                                              // begin at 3:20.5 of the song (the same part as lyrics.lrc)
     shake: 1.0, typos: true,
     colors: { accent: "#ff6450", cursor: "#ff4a35", keys: "110,90,255", glow: "255,80,60" },
     tabs: ["heart.js", "cure.ts", "medication.json", "stitches.css"], file: "heart.js",

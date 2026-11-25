@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cure · lyric code</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../engine/lyric-code.css">
+</head>
+<body>
+<script>
+  // "The Cure" by Olivia Rodrigo — dark red, glitchy, sad ending.
+  // Lyrics: lyrics.lrc in this folder (your timed lines).
+  // Open: right-click this file in VS Code -> Open with Live Server.
+  window.SONG = {
+    title: "The Cure", artist: "Olivia Rodrigo",
+    shake: 1.0, typos: true,
+    colors: { accent: "#ff6450", cursor: "#ff4a35", keys: "110,90,255", glow: "255,80,60" },
+    tabs: ["heart.js", "cure.ts", "medication.json", "stitches.css"], file: "heart.js",
+    problems: "⚠ 0 cures found",
+    intro: [
+      { at: -3.3, code: [{ c: "cm", s: "/** heart.js · the cure · olivia rodrigo */" }] },
+      { at: -2.2, code: [{ c: "kw", s: "import" }, { c: "pu", s: " { " }, { c: "key", s: "cure" }, { c: "pu", s: " } " }, { c: "kw", s: "from" }, { c: "pu", s: " " }, { c: "str", s: '"./love"' }, { c: "pu", s: ";" }] },
+      { at: -1.1, code: [{ c: "cm", s: "// TODO: fix heart" }] },
+    ],
+    // theme words: col = flash color, amt = shake, bpm = heart-rate change, thump = heartbeat hit
+    kinds: {
+      toxic:    { words: ["poison", "poisoned", "toxins", "toxin", "toxic", "bloodstream", "venom"], col: "60,255,110",  amt: 0.6,  bpm: 28 },
+      medicine: { words: ["medication", "medicine", "pill", "pills", "dose", "stitch", "stitches"],  col: "120,220,255", amt: 0.5,  bpm: -10 },
+      heart:    { words: ["heart", "love", "kiss"],                                                  col: "255,40,80",   amt: 0.45, bpm: 14, thump: true },
+      hurt:     { words: ["doubt", "enough", "matter", "why"],                                       col: "255,90,60",   amt: 0.4,  bpm: 8 },
+      final:    { words: ["never", "cure"],                                                          col: "255,25,25",   amt: 0.85, bpm: 20 },
+    },
+    decoys: ["heartbeat", "healing", "handler", "stitch_wound", "suture", "serum", "dose_ml", "doubt_loop", "medicate",
+      "memory_leak", "never_ending", "null", "poison_pill", "promise", "relapse", "return", "toxic_ref", "try_catch",
+      "undefined", "void", "bandage", "bleed", "broken_ptr", "cure_v2", "fever", "ghost", "ignore", "ache", "await",
+      "overdose", "pulse", "scar_tissue", "symptom"],
+    ending: {
+      mood: "sad", heartStops: 11, fadeAt: 13, powerOffAt: 16,
+      script: [
+        { at: 0.0, type: "node heart.js", cps: 11, cls: "cmdline", prompt: true },
+        { at: 2.4, print: "✖ ReferenceError: cure is not defined", cls: "err",
+          hit: { amt: 0.25, red: 0.3, col: "200,40,50" }, status: '<span class="bad">✖ 1 problem: cure is not defined</span>' },
+        { at: 3.0, print: "    at heart (heart.js:∞:1)", cls: "d" },
+        { at: 3.4, print: "    at you (love.js:0:0)", cls: "d" },
+        { at: 5.2, type: "// maybe next time", cps: 7, cls: "cmt", prompt: true, erase: { after: 1.8, cps: 11 } },
+      ],
+    },
+  };
+</script>
+<script src="../../engine/lyric-code.js"></script>
+</body>
+</html>
